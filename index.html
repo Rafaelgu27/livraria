@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <h2>Romance</h2>
+
+        <li class="produtos-valor">
+        	<h3>É assim que acaba</h3>
+          <img src="livro1.jpg" class="imagens-produtos" alt="">
+          <p class="preco-produto">R$32,00</p>
+        </li>
+        <li class="produtos-valor">
+        	<h3>A hipótese do amor</h3>
+          <img src="livro2.jpg" class="imagens-produtos"  alt="">
+          <p class="preco-produto">R$33,90</p>
+        </li>
+        <li class="produtos-valor">
+        	<h3>Amor e gelato</h3>
+          <img src="livro3.jpg" class="imagens-produtos" alt="">
+          <p class="preco-produto">R$39,75</p>
+        </li>
+
+        <h2>Fantasia</h2>
+
+   	    <li class="produtos-valor">
+          <h3>Rainha vermelha</h3>
+          <img src="aventura1.jpg" class="imagens-produtos" alt="">
+          <p class="preco-produto">R$32,99</p>
+        </li>
+        <li class="produtos-valor">
+          <h3>A princesa das cinzas</h3>
+          <img src="aventura2.jpg" class="imagens-produtos" alt="">
+          <p class="preco-produto">R$42,00</p>
+        </li>
+        <li class="produtos-valor">
+          <h3>Sombra e ossos</h3>
+          <img src="aventura3.jpg" class="imagens-produtos" alt="">
+          <p class="preco-produto">R$29,00</p>
+        </li>
+
+        <input type="text" id="valorCompra" placeholder="Insira o valor em reias ">
+      <button onclick="calcularDesconto()">Calcular Desconto</button>
+      <p>Desconto aplicado: <span id="desconto"></span> </p>
+
+        <script>
+          function calcularDesconto(){
+              const valorCompra= parseFloat(document.getElementById('valorCompra').value);
+  
+              let desconto= 0;
+  
+              if(valorCompra > 200){
+                  desconto= 0.2; //20%
+              } else if (valorCompra > 100) {
+                  desconto= 0.1; //10%
+              }else if ( valorCompra <= 100){
+                  desconto= 0.05; //5%
+              }
+  
+              const valorDesconto = valorCompra * desconto;
+              document.getElementById('desconto').textContent = `R$ ${valorDesconto.toFixed(2)}`;
+          }
+      </script>
+</body>
+</html>

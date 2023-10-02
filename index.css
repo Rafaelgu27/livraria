@@ -1,0 +1,27 @@
+body{
+    background-color: antiquewhite;
+}
+.produtos-valor{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+input{
+    font-size: 25px;
+}
+button{
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+p{
+    font-size: 25px;
+}
