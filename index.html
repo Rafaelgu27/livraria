@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cadastro.html">
 
 </head>
 <body>
+
+      <header>
+        <div class="cabeca">
+          <nav>
+            <ul>
+              <li><a href="pagina2.html">Questionário</a></li>
+              <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+      </header>
+
+
     <h2>Romance</h2>
 
         <li class="produtos-valor">
@@ -50,20 +65,20 @@
 
         <script>
           function calcularDesconto(){
-              const valorCompra= parseFloat(document.getElementById('valorCompra').value);
-  
-              let desconto= 0;
-  
-              if(valorCompra > 200){
-                  desconto= 0.2; //20%
-              } else if (valorCompra > 100) {
-                  desconto= 0.1; //10%
-              }else if ( valorCompra <= 100){
-                  desconto= 0.05; //5%
-              }
-  
-              const valorDesconto = valorCompra * desconto;
-              document.getElementById('desconto').textContent = `R$ ${valorDesconto.toFixed(2)}`;
+            const valorCompra= parseFloat(document.getElementById('valorCompra').value);
+
+            let desconto= 0;
+
+            if(valorCompra > 200){
+                desconto= 0.2; //20%
+            } else if (valorCompra > 100) {
+                desconto= 0.1; //10%
+            }else if ( valorCompra <= 100){
+                desconto= 0.05; //5%
+            }
+
+            const valorDesconto = valorCompra * desconto;
+            document.getElementById('desconto').textContent = `R$ ${valorDesconto.toFixed(2)}`;
           }
       </script>
 </body>
